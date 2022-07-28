@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.0.12/pricy_0.0.12_Darwin_x86_64.tar.gz"
-      sha256 "8a782c677e99822cb50ce8b618df59bd2ad2de4a8b18ca96e526387e68a28cfd"
+    if Hardware::CPU.arm?
+      url "https://github.com/StanGirard/pricy/releases/download/0.0.13/pricy_0.0.13_Darwin_arm64.tar.gz"
+      sha256 "52a54414eadc550383f9c119d8d1a313b56fa6114eea074c729433b7b952e0c2"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy/releases/download/0.0.12/pricy_0.0.12_Darwin_arm64.tar.gz"
-      sha256 "f25bf7413d0efcf44c4e17d76b86b2a94ce60ab5b6e77e337d40ab44d0f9b8dc"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/0.0.13/pricy_0.0.13_Darwin_x86_64.tar.gz"
+      sha256 "355f749708a30a690e31c599c6ed91c911c1b42d334abec425814375039ceae7"
 
       def install
         bin.install "pricy"
@@ -27,17 +27,17 @@ class Pricy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.0.12/pricy_0.0.12_Linux_x86_64.tar.gz"
-      sha256 "9e340c7a946cbb049d95a16c82264443c9707fc20cbf591d1f6ea5cd460ee658"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StanGirard/pricy/releases/download/0.0.13/pricy_0.0.13_Linux_arm64.tar.gz"
+      sha256 "88bcff8abe59784035aec29076ecacf88276495e44a8aaf6dad5bab3246e14ef"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy/releases/download/0.0.12/pricy_0.0.12_Linux_arm64.tar.gz"
-      sha256 "8c1b0dcf8f2afef4ad6f7f0bf8420ff9c566f1de5b5ef5105e3bbf3c52c78d3c"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/0.0.13/pricy_0.0.13_Linux_x86_64.tar.gz"
+      sha256 "c6370381a909d52d71e26f1c9eae2dc62bd61f087017131fb1b636eb237795e2"
 
       def install
         bin.install "pricy"
