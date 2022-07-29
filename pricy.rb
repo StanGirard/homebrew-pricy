@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.1/pricy_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "ce1c10c4da1950190093532d2d0f93cdb0972d89f410a75d7002b3d9f656e9eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/StanGirard/pricy/releases/download/0.4.2/pricy_0.4.2_Darwin_arm64.tar.gz"
+      sha256 "b2329e5b60a382afa371a471e01ade608c4a3fd39021c9e5ed81d6e1d385af1d"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.1/pricy_0.4.1_Darwin_arm64.tar.gz"
-      sha256 "bf4fb958bcc7510d44a50bf73b1f243e02dd9ae4e0e253887d547b9c52634183"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/0.4.2/pricy_0.4.2_Darwin_x86_64.tar.gz"
+      sha256 "4bf66f0015a13e6f7ae595aa8744ad57e03c4073e1fdebce577bc8c7a9eba29b"
 
       def install
         bin.install "pricy"
@@ -27,17 +27,17 @@ class Pricy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.1/pricy_0.4.1_Linux_arm64.tar.gz"
-      sha256 "0466a61fd8f98ffd5c5763ba7dddb819e49c81639fa45d05b483c8b5399572a6"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/0.4.2/pricy_0.4.2_Linux_x86_64.tar.gz"
+      sha256 "900cf8a47d5368d175df8b3f3fe0db8376efd54b1e67f55cb6f0a2c68177d5e1"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.1/pricy_0.4.1_Linux_x86_64.tar.gz"
-      sha256 "8ac60b579788c2a739ac883df1b32fe3efee26596cdfeb698a7cbb8332615c70"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StanGirard/pricy/releases/download/0.4.2/pricy_0.4.2_Linux_arm64.tar.gz"
+      sha256 "6bcac92f2875299dc42f999b846662370ef7796be62f04c0f244ac3344f19da9"
 
       def install
         bin.install "pricy"
