@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "5cada99939722c39384dac62a027e62d1d915a59519b726ffe82bb8e5e1a5a33"
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.3/pricy_0.3.3_Darwin_x86_64.tar.gz"
+      sha256 "e7d23c9d011ed57602334e785bc4305980050418802b4b23f048c6ca59a37e33"
 
       def install
         bin.install "pricy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Darwin_arm64.tar.gz"
-      sha256 "04c5e599930b9d6ce04e5827bf916a82434bea9efc5e5894b3a2c1ca363f205b"
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.3/pricy_0.3.3_Darwin_arm64.tar.gz"
+      sha256 "60925c67cce56388f489c1282bfc488e98f1cbcb2d7607a72b681178648d5b97"
 
       def install
         bin.install "pricy"
@@ -27,17 +27,17 @@ class Pricy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "7986816f7f2cb956a0c0eace4841bfd1609088b2b95dba38e759c191ceb9ca42"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.3/pricy_0.3.3_Linux_arm64.tar.gz"
+      sha256 "81992bdc9dc201cd680475341449e58d36b0f6fcdca7981e3932c3598368fec2"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Linux_arm64.tar.gz"
-      sha256 "d7d96ad8c2aba721b68d1c51ef23d81a88ce22e1dd461fd77f27d8e22978b2de"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.3/pricy_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "b482f556dc5179fbee8dde11fe4ad5edad3c568a3e085e55b365b5b950c0f6ea"
 
       def install
         bin.install "pricy"
