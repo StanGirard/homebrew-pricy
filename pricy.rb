@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.1/pricy_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "d47ae73b70bbb6fe84a855122bf8dfafe2f2ec3890c7048f9b3ef9f1dcfdaebf"
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Darwin_x86_64.tar.gz"
+      sha256 "5cada99939722c39384dac62a027e62d1d915a59519b726ffe82bb8e5e1a5a33"
 
       def install
         bin.install "pricy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.1/pricy_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "4376a06f217eec6ad8a2ac8dca69d3400f45ea6ee57dc06e76681e3e19263796"
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Darwin_arm64.tar.gz"
+      sha256 "04c5e599930b9d6ce04e5827bf916a82434bea9efc5e5894b3a2c1ca363f205b"
 
       def install
         bin.install "pricy"
@@ -28,16 +28,16 @@ class Pricy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.1/pricy_0.3.1_Linux_x86_64.tar.gz"
-      sha256 "27d086d5afd4cb5aa56f9f8a93d7e8edf0e4503a9a53d22233f36d30cfb8c895"
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Linux_x86_64.tar.gz"
+      sha256 "7986816f7f2cb956a0c0eace4841bfd1609088b2b95dba38e759c191ceb9ca42"
 
       def install
         bin.install "pricy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy/releases/download/0.3.1/pricy_0.3.1_Linux_arm64.tar.gz"
-      sha256 "5c7c356a0e4a1eb733e8efc9c20a898620d5507b2f3cdbd91034c5df1e7300c4"
+      url "https://github.com/StanGirard/pricy/releases/download/0.3.2/pricy_0.3.2_Linux_arm64.tar.gz"
+      sha256 "d7d96ad8c2aba721b68d1c51ef23d81a88ce22e1dd461fd77f27d8e22978b2de"
 
       def install
         bin.install "pricy"
