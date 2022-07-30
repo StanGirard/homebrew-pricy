@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.4.3"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.3/pricy_0.4.3_Darwin_x86_64.tar.gz"
-      sha256 "e60cc63b8c4785954a5c64c6a1b3af2ff12096a30ce8b6509062ab19e0159f25"
+    if Hardware::CPU.arm?
+      url "https://github.com/StanGirard/pricy/releases/download/0.5.0/pricy_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "a644138ec7f099c6834c459902e8f29bf70fda0f990f8ad53d83a729fb15786d"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.3/pricy_0.4.3_Darwin_arm64.tar.gz"
-      sha256 "2d1eb85cbec85d1ba718df76f03fd76199194735394c0c64bc2f9d93cb9a82bc"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/0.5.0/pricy_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "3944aa7c0665d77f8db245529722aa6fca6cf5c7c38d5636012755f68652b09a"
 
       def install
         bin.install "pricy"
@@ -28,16 +28,16 @@ class Pricy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.3/pricy_0.4.3_Linux_arm64.tar.gz"
-      sha256 "e6299e85934e4c25c6e3ec6ff7f0cc203b37d28c8b46c011e34f31c4d9ec6b3b"
+      url "https://github.com/StanGirard/pricy/releases/download/0.5.0/pricy_0.5.0_Linux_arm64.tar.gz"
+      sha256 "695620e1681c4885cdc86860cfffd4edf6d6cd1af33b6bbe8be9d100d24708b7"
 
       def install
         bin.install "pricy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.4.3/pricy_0.4.3_Linux_x86_64.tar.gz"
-      sha256 "8ef36883a02a50cc017a572106b34ecde1c7f952db8b14c9e8de9cb107930c74"
+      url "https://github.com/StanGirard/pricy/releases/download/0.5.0/pricy_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "4fc4250c248c534939845a09622ed3a64500ba4f32aba9334f8b4d82ccc96657"
 
       def install
         bin.install "pricy"
