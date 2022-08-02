@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy/releases/download/0.6.0/pricy_0.6.0_Darwin_arm64.tar.gz"
-      sha256 "1c735bf13e743169a8537764307d8249b04a416180709031d4c2c3f10c9aabe5"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Darwin_x86_64.tar.gz"
+      sha256 "d893c3e2080ee310827a2776368c203462127fd849f981877eccbba5d0758694"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.6.0/pricy_0.6.0_Darwin_x86_64.tar.gz"
-      sha256 "b473f2503db9f5152e63480edd3b29ffee7b5679af1a0901f908db5679466413"
+    if Hardware::CPU.arm?
+      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Darwin_arm64.tar.gz"
+      sha256 "4fb692d516f6e8f19e3e3d471ea570c8fc365febc0cacc3795490aecc482e7ee"
 
       def install
         bin.install "pricy"
@@ -27,17 +27,17 @@ class Pricy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy/releases/download/0.6.0/pricy_0.6.0_Linux_x86_64.tar.gz"
-      sha256 "45e0b4bd33c1d4fe7aaabeff13095fe1c7a35a0376cae1c5315d85945204aca8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Linux_arm64.tar.gz"
+      sha256 "7fad4d3f650e135f6ace5768b6f0705191ca374aa46d6fa7b36772dc7bc05322"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy/releases/download/0.6.0/pricy_0.6.0_Linux_arm64.tar.gz"
-      sha256 "42e7df23e03a507b60ac47d33ff1add4317ec8582d5d218c88d08baf8c176200"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Linux_x86_64.tar.gz"
+      sha256 "4a95446e61bd99fff33ad42162169c0ffab19b717d7d4b9954142266395a058d"
 
       def install
         bin.install "pricy"
