@@ -5,20 +5,20 @@
 class Pricy < Formula
   desc ""
   homepage "https://github.com/stangirard/pricy"
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Darwin_x86_64.tar.gz"
-      sha256 "d893c3e2080ee310827a2776368c203462127fd849f981877eccbba5d0758694"
+      url "https://github.com/StanGirard/pricy/releases/download/v0.7.1/pricy_0.7.1_Darwin_x86_64.tar.gz"
+      sha256 "27c63fb486bbbb8ea19426d6e0c49d3e7f66cfd9c6a3d45dbefd61382f20209b"
 
       def install
         bin.install "pricy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Darwin_arm64.tar.gz"
-      sha256 "4fb692d516f6e8f19e3e3d471ea570c8fc365febc0cacc3795490aecc482e7ee"
+      url "https://github.com/StanGirard/pricy/releases/download/v0.7.1/pricy_0.7.1_Darwin_arm64.tar.gz"
+      sha256 "fd5a011ce17c7ee793d07680883ada442d06671bae164740f152d2f7de99c04f"
 
       def install
         bin.install "pricy"
@@ -27,17 +27,17 @@ class Pricy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Linux_arm64.tar.gz"
-      sha256 "7fad4d3f650e135f6ace5768b6f0705191ca374aa46d6fa7b36772dc7bc05322"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/pricy/releases/download/v0.7.1/pricy_0.7.1_Linux_x86_64.tar.gz"
+      sha256 "7ef41eaa008b53dd02d94e9e81f43ccc9ef8b1b261cc3c50cf873de29f464939"
 
       def install
         bin.install "pricy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/pricy-aws-azure-cost-report/releases/download/0.7.0/pricy-aws-azure-cost-report_0.7.0_Linux_x86_64.tar.gz"
-      sha256 "4a95446e61bd99fff33ad42162169c0ffab19b717d7d4b9954142266395a058d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StanGirard/pricy/releases/download/v0.7.1/pricy_0.7.1_Linux_arm64.tar.gz"
+      sha256 "10650c3b5e5715f73af85a00948e82a20b217cd3fba26eb0aaf6c2b8a3703478"
 
       def install
         bin.install "pricy"
