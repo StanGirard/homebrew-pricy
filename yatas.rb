@@ -5,20 +5,20 @@
 class Yatas < Formula
   desc ""
   homepage "https://github.com/stangirard/yatas"
-  version "0.9.19"
+  version "0.9.20"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.19/YATAS_0.9.19_Darwin_x86_64.tar.gz"
-      sha256 "77a50b598f4016dbf9b82b8c5bcca588b053c5fd0c9a8e0f2ffc9d25a9fdf21c"
+      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.20/YATAS_0.9.20_Darwin_x86_64.tar.gz"
+      sha256 "0d63712b4a3df37c5156bedc9291cf063fad4e15143d7fb02c6f0b901c955e1a"
 
       def install
         bin.install "yatas"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.19/YATAS_0.9.19_Darwin_arm64.tar.gz"
-      sha256 "51fcedaea704a02add344cf7c9034766a9276d9e9f147506bb6d8a24c1cb4686"
+      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.20/YATAS_0.9.20_Darwin_arm64.tar.gz"
+      sha256 "8ebcb078b9345bb5eb18a2a850f9fc06b4aa5d97c90e31a09ef7d0e7a93d52a2"
 
       def install
         bin.install "yatas"
@@ -27,17 +27,17 @@ class Yatas < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.19/YATAS_0.9.19_Linux_x86_64.tar.gz"
-      sha256 "39f3cc65f58f1b13854cd8bc3f608af0606457618e4a5fd4eca38a4701f4fdae"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.20/YATAS_0.9.20_Linux_arm64.tar.gz"
+      sha256 "eea7d70676477ccdb20828d0f46c97c7dcd2fc5de804a9b3d3d86dc7e9f393a9"
 
       def install
         bin.install "yatas"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.19/YATAS_0.9.19_Linux_arm64.tar.gz"
-      sha256 "4eaaae826f0c9642a0d498ce84bb3f4bdc70ccce21b4c8e01f089a15eb2f9d0b"
+    if Hardware::CPU.intel?
+      url "https://github.com/StanGirard/YATAS/releases/download/v0.9.20/YATAS_0.9.20_Linux_x86_64.tar.gz"
+      sha256 "14a94c58d724825a0aeb1ff927d3c35c4226330254ee9f22fe9fc3559847a23b"
 
       def install
         bin.install "yatas"
