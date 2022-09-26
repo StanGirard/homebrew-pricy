@@ -5,20 +5,20 @@
 class Yatas < Formula
   desc ""
   homepage "https://github.com/stangirard/yatas"
-  version "0.11.10"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.11.10/YATAS_0.11.10_Darwin_x86_64.tar.gz"
-      sha256 "756647b061e02bc0ea7a608d890998280c791929713891fc3fdb61d0d59ae9ec"
+      url "https://github.com/StanGirard/YATAS/releases/download/v1.0.0/YATAS_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "b5d6fd869b18c4676cfe633391294eb1ce82bd745d186d904d508b8f49409c98"
 
       def install
         bin.install "yatas"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.11.10/YATAS_0.11.10_Darwin_arm64.tar.gz"
-      sha256 "8a66ad64cab46508fba32dc4cba12012410c319a4cebd33eed00bed0ed60e293"
+      url "https://github.com/StanGirard/YATAS/releases/download/v1.0.0/YATAS_1.0.0_Darwin_arm64.tar.gz"
+      sha256 "20bc6b5a0050dacd89bca0c670d6d960515400205de18185f51e689b4f813dfa"
 
       def install
         bin.install "yatas"
@@ -28,16 +28,16 @@ class Yatas < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.11.10/YATAS_0.11.10_Linux_x86_64.tar.gz"
-      sha256 "399ee76868d5af2cd32d3ef6c02f86b9a2b7c436c917d7dec2bb3a1c11cf9e78"
+      url "https://github.com/StanGirard/YATAS/releases/download/v1.0.0/YATAS_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "6c259db939eeca1f0c3b326f53c587a0bff5f62f98ef750813867cb66c458ac7"
 
       def install
         bin.install "yatas"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StanGirard/YATAS/releases/download/v0.11.10/YATAS_0.11.10_Linux_arm64.tar.gz"
-      sha256 "b7416c65b136d583fd5f5ff861d66d0207565cc5abd4da76bbbaada166372d38"
+      url "https://github.com/StanGirard/YATAS/releases/download/v1.0.0/YATAS_1.0.0_Linux_arm64.tar.gz"
+      sha256 "6a4f4fab1e1fc08286954876a223605f9005a76d27fcf63023823e2e809e7018"
 
       def install
         bin.install "yatas"
